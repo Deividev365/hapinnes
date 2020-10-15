@@ -1,0 +1,35 @@
+metodos http:
+console.log(req.query); http://localhost:3000/1?search=deivid
+    
+console.log(req.params); http://localhost:3000/1
+    
+console.log(req.body); http://localhost:3000/1
+
+ query return = { search: 'deivid' }
+ params return = { id: '1' }
+body return = { name: 'Deivid' }
+
+
+verbos http:
+GET = Pegar dados
+POST = Enviar dados (criar dados)
+PUT = editar dados
+DELETE = deletar dados
+
+
+{
+	"name": "Lar das Meninas",
+	"latitude": -23.3896053,
+	"longitude": -46.3145073,
+	"about": "Sobre o orfanato",
+	"instructions": "Instruçoes para visitar",
+	"opening_hours": "Das 8h às 18h",
+	"open_on_weekends": false
+	
+	
+	
+	
+	
+}
+
+
