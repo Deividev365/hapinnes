@@ -21,7 +21,8 @@ const mapIcon = leaflet.icon({
 
     iconSize: [46, 46],
     iconAnchor: [23, 50],
-    popupAnchor: [170, 2],
+    popupAnchor: [170, 2
+    ],
 
 })
 
