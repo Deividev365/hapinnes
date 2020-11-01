@@ -61,9 +61,9 @@ function OrphanagesMap() {
                             maxWidth={240}
                             className="map-popup"
                         >
-                            Nome do orfanato
+                            Lar das Meninas
 
-                            <Link to="">
+                            <Link to="/Orphanage">
                                 <FiArrowRight 
                                     size={20}
                                     color="#fff"
@@ -75,7 +75,7 @@ function OrphanagesMap() {
                 </Map> 
             
 
-                <Link to="" className="create-orphanage">
+                <Link to="/create-orphanage" className="create-orphanage">
                     <FiPlus size={32} color="black"/>
                 </Link>
         </div>

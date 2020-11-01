@@ -20,7 +20,6 @@ function Landing() {
           <main>
               <h1>Leve a felicidade para o mundo.</h1>
               <p>Visite um orfanato e mude o dia de uma criança</p>
-
           </main>
 
 

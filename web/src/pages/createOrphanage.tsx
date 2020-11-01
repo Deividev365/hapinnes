@@ -3,23 +3,19 @@ import { Marker } from 'react-leaflet';
 
 
 
-import './styles.css';
+import '../styles/pages/create-orphanage.css';
 import { FiPlus } from "react-icons/fi";
 
 
 export default function OrphanagesMap() {
   return (
     <div id="page-create-orphanage">
-      <Sidebar />
 
       <main>
         <form className="create-orphanage-form">
           <fieldset>
             <legend>Dados</legend>
 
-            <Map style={{ width: '100%', height: 280 }}>
-              <Marker interactive={false} icon={happyMapIcon} position={[-27.2092052,-49.6401092]} />
-            </Map>
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
@@ -66,12 +62,9 @@ export default function OrphanagesMap() {
               </div>
             </div>
           </fieldset>
-
-          <PrimaryButton type="submit">Confirmar</PrimaryButton>
+          
         </form>
       </main>
     </div>
   );
 }
-
-// return `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;

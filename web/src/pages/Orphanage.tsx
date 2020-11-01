@@ -4,11 +4,13 @@ import { FiClock, FiInfo } from "react-icons/fi";
 import { Marker, TileLayer } from "react-leaflet";
 import L from 'leaflet';
 
-import mapMarkerImg from '../../assets/images/map-marker.svg';
+import {Map} from 'react-leaflet'
+
+import mapMarkerImg from '../images/mapMark.svg';
 
 
 
-import './styles.css';
+import '../styles/pages/Orphanage.css';
 
 const happyMapIcon = L.icon({
   iconUrl: mapMarkerImg,
@@ -52,14 +54,15 @@ export default function Orphanage() {
             <p>Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.</p>
 
             <div className="map-container">
-              <Map 
+               <Map 
                 interactive={false}
                 center={[-27.2092052,-49.6401092]} 
                 zoom={16} 
                 style={{ width: '100%', height: 280 }}
-              >
+              > 
                 <Marker interactive={false} icon={happyMapIcon} position={[-27.2092052,-49.6401092]} />
               </Map>
+              */
 
               <footer>
                 <a href="">Ver rotas no Google Maps</a>
@@ -84,10 +87,10 @@ export default function Orphanage() {
               </div>
             </div>
 
-            <PrimaryButton type="button">
+            <button type="button">
               <FaWhatsapp size={20} color="#FFF" />
               Entrar em contato
-            </PrimaryButton>
+            </button>
           </div>
         </div>
       </main>
