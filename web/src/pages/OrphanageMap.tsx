@@ -1,30 +1,15 @@
-// Parei no minuto 13
-
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {FiPlus, FiArrowRight} from 'react-icons/fi';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 
-import leaflet from 'leaflet';
-
-
-
-import 'leaflet/dist/leaflet.css';
 
 import mapMarkerImg from '../images/mapMark.svg';
+import mapIcon from '../utils/mapIcon';
+
 
 import '../styles/pages/orphanage-map.css';
 
-
-const mapIcon = leaflet.icon({
-    iconUrl: mapMarkerImg,
-
-    iconSize: [46, 46],
-    iconAnchor: [23, 50],
-    popupAnchor: [170, 2
-    ],
-
-})
 
 function OrphanagesMap() {
     return(
@@ -63,7 +48,7 @@ function OrphanagesMap() {
                         >
                             Lar das Meninas
 
-                            <Link to="/Orphanage">
+                            <Link to="/Orphanages/1">
                                 <FiArrowRight 
                                     size={20}
                                     color="#fff"
@@ -75,7 +60,7 @@ function OrphanagesMap() {
                 </Map> 
             
 
-                <Link to="/create-orphanage" className="create-orphanage">
+                <Link to="/Orphanage/create" className="create-orphanage">
                     <FiPlus size={32} color="black"/>
                 </Link>
         </div>

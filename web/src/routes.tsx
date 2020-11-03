@@ -10,8 +10,8 @@ function Routes() {
         <BrowserRouter>
             <Route path="/" component={Landing} exact/>
             <Route path="/app" component={OrphanagesMap} />
-            <Route path="/Orphanage" component={Orphanage} />
-            <Route path="/create-orphanage" component={CreateOrphanage} />
+            <Route path="/Orphanages/:id" component={Orphanage} />
+            <Route path="/Orphanage/create" component={CreateOrphanage} />
         </BrowserRouter>
     )
 }

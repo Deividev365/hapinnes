@@ -1,0 +1,32 @@
+
+
+.contact-info {
+    
+    padding: 55px;
+
+}
+.contact-info button {
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+
+    background-color: rgb(212, 223, 220);
+    padding: 5px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: 0.2s background-color;
+}
+
+.contact-info button:hover {
+  
+    background-color: #0089A5;
+    color: #ffffff;
+
+}

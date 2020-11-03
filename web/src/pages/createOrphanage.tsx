@@ -1,20 +1,43 @@
 import React from "react";
-import { Marker } from 'react-leaflet';
+import {Map, TileLayer, Marker} from 'react-leaflet'
 
+import { FiPlus } from "react-icons/fi";
+//import { FaWhatsapp } from "react-icons/fa";
+
+
+import SideBar from "../components/sideBar";
+import mapIcon from "../utils/mapIcon";
 
 
 import '../styles/pages/create-orphanage.css';
-import { FiPlus } from "react-icons/fi";
 
 
 export default function OrphanagesMap() {
   return (
     <div id="page-create-orphanage">
 
+      <SideBar/>
+
       <main>
         <form className="create-orphanage-form">
           <fieldset>
             <legend>Dados</legend>
+
+            <Map
+                center={[-27.2092052, -49.6401092]}
+                zoom={16}
+                style={{ width: "100%", height: 280 }}
+                dragging={false}
+                touchZoom={false}
+                zoomControl={false}
+                scrollWheelZoom={false}
+                doubleClickZoom={false}
+              >
+                <TileLayer
+                  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                />
+                <Marker interactive={false} icon={mapIcon} position={[-27.2092052,-49.6401092]} />
+              </Map>
 
 
             <div className="input-block">
@@ -25,6 +48,11 @@ export default function OrphanagesMap() {
             <div className="input-block">
               <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
               <textarea id="name" maxLength={300} />
+            </div>
+
+            <div className="input-block">
+              <label htmlFor="phone">Número para contato</label>
+              <input type="number" id="name"/>
             </div>
 
             <div className="input-block">
@@ -42,6 +70,7 @@ export default function OrphanagesMap() {
 
           <fieldset>
             <legend>Visitação</legend>
+
 
             <div className="input-block">
               <label htmlFor="instructions">Instruções</label>
@@ -62,6 +91,7 @@ export default function OrphanagesMap() {
               </div>
             </div>
           </fieldset>
+            
           
         </form>
       </main>
