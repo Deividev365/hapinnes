@@ -6,12 +6,8 @@ import {Map, Marker, TileLayer} from "react-leaflet";
 
 import SideBar from "../components/sideBar";
 import mapIcon from "../utils/mapIcon";
-import PrimaryButton from "../components/primaryButton";
-
-
 
 import '../styles/pages/Orphanage.css';
-
 
 
 export default function Orphanage() {
@@ -90,7 +86,7 @@ export default function Orphanage() {
               </div>
             </div>
 
-            <PrimaryButton/>
+            
           </div>
         </div>
       </main>

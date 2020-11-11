@@ -2,11 +2,10 @@ import React from "react";
 import {Map, TileLayer, Marker} from 'react-leaflet'
 
 import { FiPlus } from "react-icons/fi";
-//import { FaWhatsapp } from "react-icons/fa";
-
 
 import SideBar from "../components/sideBar";
 import mapIcon from "../utils/mapIcon";
+import PrimaryButton from "../components/primaryButton";
 
 
 import '../styles/pages/create-orphanage.css';
@@ -91,6 +90,8 @@ export default function OrphanagesMap() {
               </div>
             </div>
           </fieldset>
+
+          <PrimaryButton/>
             
           
         </form>
